@@ -1,0 +1,203 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Lusitana&family=Roboto&family=Roboto+Condensed&display=swap');
+
+html, body {
+  font-family: 'Lusitana', sans-serif;
+  font-size: 12px;
+  height: 100%;
+}
+
+#container {
+  height: 100%; /* to make the footer stay on the bottom */
+}
+
+#content {
+  min-height: 100%; /* to make the footer stay on the bottom */
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+}
+
+.gridItem {
+  display: grid;
+  place-self: stretch;
+}
+
+#gridHeader .gridItem {
+  align-items: center;
+}
+
+#gridHeader {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: repeat(10, 9.1%); 
+  grid-template-rows: 1.75em 5em;
+  column-gap: 1%;
+  align-items: center;
+  justify-items:center;
+  grid-template-areas:
+  "topHeaderLeft topHeaderLeft topHeaderCenter topHeaderCenter topHeaderCenter topHeaderCenter topHeaderRight topHeaderRight"
+  "mainHeaderLeft mainHeaderLeft mainHeaderCenter mainHeaderCenter mainHeaderCenter mainHeaderCenter mainHeaderRight mainHeaderRight";
+  background-color: brown;
+}
+
+#topHeaderLeft {
+  grid-area: topHeaderLeft;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-items: start;
+  background: red;
+}
+
+#topHeaderCenter {
+  grid-area: topHeaderCenter;
+  grid-column-start: 3;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-items: center;
+  background: crimson;
+}
+
+#topHeaderRight {
+  grid-area: topHeaderRight;
+  grid-column-start: 9;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-items: end;
+  background: darkred;
+}
+
+#mainHeaderLeft {
+  grid-area: mainHeaderLeft;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-items: start;
+  background: firebrick;
+}
+
+#mainHeaderCenter {
+  grid-area: mainHeaderCenter;
+  grid-column-start: 3;
+  grid-column-end: 9;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-items: center;
+  background: indianred;
+}
+
+#mainHeaderRight {
+  grid-area: mainHeaderRight;
+  grid-column-start: 9;
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-items: end;
+  background:lightcoral;
+}
+
+main {
+  padding-top: 10.75em; /* this is for fixed headers and should be changed based on the header height*/
+  padding-bottom: 3em; /* this is for the footer and should match the footer margin top */
+}
+
+#gridContent {
+  display: grid;
+  grid-template-columns: repeat(16, 5.315%); 
+  column-gap: 1%;
+  align-items: start;
+  justify-items:center;
+  grid-template-areas:
+  "contentLeft contentLeft contentLeft contentLeft contentCenter contentCenter contentCenter contentCenter contentCenter contentCenter contentCenter contentCenter contentRight contentRight contentRight contentRight";
+  background-color: blue;
+}
+
+#contentLeft {
+  grid-area: contentLeft;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-items: start;
+  background: cadetblue;
+}
+
+#contentCenter {
+  grid-area: contentCenter;
+  grid-column-start: 5;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-items: center;
+  background: cornflowerblue;
+}
+
+#contentRight {
+  grid-area: contentRight;
+  grid-column-start: 13;
+  grid-column-end: 17;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-items: end;
+  background: darkblue;
+  color: white;
+}
+
+footer {
+  margin-top: -3em; /* to make the footer stay on the bottom */
+}
+
+#gridFooter {
+  display: grid;
+  grid-template-columns: repeat(10, 9.1%); 
+  grid-template-rows: 3em; /* to make the footer stay on the bottom this should match the margin-top of the footer*/
+  column-gap: 1%;
+  align-items: center;
+  justify-items:center;
+  grid-template-areas:
+  "footerLeft footerLeft footerCenter footerCenter footerCenter footerCenter footerCenter footerCenter footerRight footerRight";
+  background-color: blue;
+}
+
+#footertLeft {
+  grid-area: footerLeft;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-items: center;
+  justify-items: start;
+  background: cadetblue;
+}
+
+#footerCenter {
+  grid-area: footerCenter;
+  grid-column-start: 3;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-items: center;
+  justify-items: center;
+  background: cornflowerblue;
+}
+
+#footerRight {
+  grid-area: footerRight;
+  grid-column-start: 9;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 2;
+    align-items: center;
+  justify-items: end;
+  background: darkblue;
+  color: white;
+}
